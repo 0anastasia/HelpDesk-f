@@ -3,6 +3,10 @@ npm
 
 [![Build status](https://ci.appveyor.com/api/projects/status/wveohbh2rfpc6xkt?svg=true)](https://ci.appveyor.com/project/0anastasia/helpdesk-f)
 
+https://0anastasia.github.io/HelpDesk-f/
+
+<a href="[https://github.com/Sergius92739/ahj-7.1-http_backend](https://0anastasia.github.io/HelpDesk-f/)">Github Pages</a>
+
 #### Описание
 
 Описание API. Для хранения данных мы будем оперировать следующими структурами:
