@@ -5,8 +5,6 @@ npm
 
 https://0anastasia.github.io/HelpDesk-f/
 
-Github Pages: <a href="[https://github.com/Sergius92739/ahj-7.1-http_backend](https://0anastasia.github.io/HelpDesk-f/)">page</a>
-
 #### Описание
 
 Описание API. Для хранения данных мы будем оперировать следующими структурами:
