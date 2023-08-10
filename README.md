@@ -1,5 +1,8 @@
 # HelpDesk frontend
 npm
+
+[![Build status](https://ci.appveyor.com/api/projects/status/wveohbh2rfpc6xkt?svg=true)](https://ci.appveyor.com/project/0anastasia/helpdesk-f)
+
 #### Описание
 
 Описание API. Для хранения данных мы будем оперировать следующими структурами:
