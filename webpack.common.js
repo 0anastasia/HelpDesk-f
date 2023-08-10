@@ -1,12 +1,51 @@
-/* eslint-disable import/no-extraneous-dependencies */
+const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
-    plugins: [
+  devtool: 'source-map',
+  target: 'web',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
+  },
+  module: {
+    rules: [
       {
-        'postcss-preset-env': {
-          browsers: 'last 2 versions',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
         },
       },
-      // eslint-disable-next-line global-require
-      require('css-mqpacker'),
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader, 'css-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
-  };
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: './src/index.html',
+      filename: './index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
+};
